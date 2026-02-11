@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: 220 15% 97%;
+  --foreground: 224 71% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71% 4%;
+  --primary: 224 76% 48%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 220 14% 95%;
+  --secondary-foreground: 224 71% 4%;
+  --muted: 220 13% 91%;
+  --muted-foreground: 220 9% 46%;
+  --accent: 215 100% 96%;
+  --accent-foreground: 224 76% 28%;
+  --destructive: 0 84% 60%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 224 76% 48%;
+  --radius: 1rem;
+  --chart-1: 224 76% 48%;
+  --chart-2: 190 74% 45%;
+  --chart-3: 154 70% 38%;
+  --chart-4: 32 94% 54%;
+  --chart-5: 0 84% 60%;
+  --font-body: 'HYWenHei', 'Inter', 'Noto Sans SC', system-ui, -apple-system, sans-serif;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: 222 30% 8%;
+  --foreground: 210 40% 98%;
+  --card: 222 30% 12%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222 30% 12%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 213 94% 68%;
+  --primary-foreground: 222 30% 8%;
+  --secondary: 222 20% 18%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 222 20% 18%;
+  --muted-foreground: 215 20% 65%;
+  --accent: 222 24% 20%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 72% 52%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 222 20% 18%;
+  --input: 222 20% 18%;
+  --ring: 213 94% 68%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground antialiased;
+  font-family: var(--font-body);
+}
+
+a {
+  @apply text-primary hover:text-primary/80 transition-colors;
+}
+
+.prose-quest {
+  @apply prose max-w-none prose-headings:text-foreground prose-p:text-foreground/90 prose-a:text-primary;
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(var(--muted-foreground)) transparent;
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted-foreground));
+  border-radius: 999px;
+}
